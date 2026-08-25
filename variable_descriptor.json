@@ -1,0 +1,652 @@
+{
+    "dataset": {
+        "description": "Source dataset/study identifier."
+    },
+    "participant_id": {
+        "description": "Harmonised participant identifier. In the modality metadata, the leading 'sub-' prefix is removed."
+    },
+    "session": {
+        "description": "Participant session identifier. In the modality metadata, the leading 'ses-' prefix is removed; 'NA' is used when no session folder is present."
+    },
+    "anat": {
+        "description": "Availability flag for anatomical MRI data; 1 when the anat folder exists and contains at least one file, otherwise 0.",
+        "values": {
+            "0": "not available",
+            "1": "available"
+        }
+    },
+    "fmri": {
+        "description": "Availability flag for functional MRI data; 1 when the func folder exists and contains at least one file, otherwise 0.",
+        "values": {
+            "0": "not available",
+            "1": "available"
+        }
+    },
+    "dwi": {
+        "description": "Availability flag for diffusion-weighted MRI data; 1 when the dwi folder exists and contains at least one file, otherwise 0.",
+        "values": {
+            "0": "not available",
+            "1": "available"
+        }
+    },
+    "directory": {
+        "description": "Absolute path to the participant/session directory used when building the harmonised modality metadata."
+    },
+    "sex": {
+        "description": "Sex of the participant.",
+        "values": {
+            "0": "female",
+            "1": "male",
+            "2": "other"
+        }
+    },
+    "age": {
+        "description": "Age of the participant as provided in the harmonised participant metadata."
+    },
+    "group": {
+        "description": "Harmonised subject diagnostic group. Includes overlapping syndromes. For example, dysthymia in MDD and child/adolescent early diagnoses of depression and anxiety are also labelled under MDD and GAD. Check the original diagnosis if more specificity is required.",
+        "values": {
+            "0": "HC",
+            "0.1": "HC Sibling",
+            "1": "SCHZ",
+            "1.1": "SCHZ Sibling",
+            "2": "BD",
+            "3": "FEP",
+            "4": "MDD",
+            "5": "CHR",
+            "6": "ADHD",
+            "7": "PTSD",
+            "8": "GAD: general anxiety disorder",
+            "9": "SAD: social anxiety disorder",
+            "10": "SUD: substance use disorder",
+            "11": "OCD: obsessive-compulsive disorder",
+            "12": "SEAD: separation anxiety disorder",
+            "13": "ASD: autistic spectrum disorder",
+            "14": "CPS: chronic pain syndrome",
+            "15": "Stroke",
+            "16": "BPD: Borderline personality disorder",
+            "17": "ARMS: at risk mental state",
+            "18": "AN: Anorexia nerviosa",
+            "19": "WR: Weight-recovered anorexia nerviosa",
+            "20": "AUD: Alcohol use disorder",
+            "21": "Panic Episode",
+            "22": "Agoraphobia"
+        }
+    },
+    "scanner": {
+        "description": "MRI scanner/site ID; if not present, all participants were scanned on the same scanner."
+    },
+    "panss_p1": {
+        "description": "PANSS positive item P1: Delusion."
+    },
+    "panss_p2": {
+        "description": "PANSS positive item P2: Conceptual disorganization."
+    },
+    "panss_p3": {
+        "description": "PANSS positive item P3: Hallucinatory behavior."
+    },
+    "panss_p4": {
+        "description": "PANSS positive item P4: Excitement."
+    },
+    "panss_p5": {
+        "description": "PANSS positive item P5: Grandiosity."
+    },
+    "panss_p6": {
+        "description": "PANSS positive item P6: Suspiciousness."
+    },
+    "panss_p7": {
+        "description": "PANSS positive item P7: Hostility."
+    },
+    "panss_n1": {
+        "description": "PANSS negative item N1: Blunted affect."
+    },
+    "panss_n2": {
+        "description": "PANSS negative item N2: Emotional withdrawal."
+    },
+    "panss_n3": {
+        "description": "PANSS negative item N3: Poor rapport."
+    },
+    "panss_n4": {
+        "description": "PANSS negative item N4: Passive apathetic social withdrawal."
+    },
+    "panss_n5": {
+        "description": "PANSS negative item N5: Difficulty in abstract thinking."
+    },
+    "panss_n6": {
+        "description": "PANSS negative item N6: Lack of spontaneity and flow of conversation."
+    },
+    "panss_n7": {
+        "description": "PANSS negative item N7: Stereotyped thinking."
+    },
+    "panss_g1": {
+        "description": "PANSS general psychopathology item G1: Somatic concern."
+    },
+    "panss_g2": {
+        "description": "PANSS general psychopathology item G2: Anxiety."
+    },
+    "panss_g3": {
+        "description": "PANSS general psychopathology item G3: Guilt feeling."
+    },
+    "panss_g4": {
+        "description": "PANSS general psychopathology item G4: Tension."
+    },
+    "panss_g5": {
+        "description": "PANSS general psychopathology item G5: Mannerisms and posturing."
+    },
+    "panss_g6": {
+        "description": "PANSS general psychopathology item G6: Depression."
+    },
+    "panss_g7": {
+        "description": "PANSS general psychopathology item G7: Motor retardation."
+    },
+    "panss_g8": {
+        "description": "PANSS general psychopathology item G8: Uncooperativeness."
+    },
+    "panss_g9": {
+        "description": "PANSS general psychopathology item G9: Unusual thought content."
+    },
+    "panss_g10": {
+        "description": "PANSS general psychopathology item G10: Disorientation."
+    },
+    "panss_g11": {
+        "description": "PANSS general psychopathology item G11: Poor attention."
+    },
+    "panss_g12": {
+        "description": "PANSS general psychopathology item G12: Lack of judgement and insight."
+    },
+    "panss_g13": {
+        "description": "PANSS general psychopathology item G13: Disturbance of volition."
+    },
+    "panss_g14": {
+        "description": "PANSS general psychopathology item G14: Poor impulse control."
+    },
+    "panss_g15": {
+        "description": "PANSS general psychopathology item G15: Preoccupation."
+    },
+    "panss_g16": {
+        "description": "PANSS general psychopathology item G16: Active social avoidance."
+    },
+    "panss_pos_total": {
+        "description": "PANSS positive-scale total score, calculated from P1-P7 when item-level data are available."
+    },
+    "panss_neg_total": {
+        "description": "PANSS negative-scale total score, calculated from N1-N7 when item-level data are available."
+    },
+    "panss_gen_total": {
+        "description": "PANSS general psychopathology total score, calculated from G1-G16 when item-level data are available."
+    },
+    "panss_total": {
+        "description": "PANSS total score, calculated from the positive, negative, and general psychopathology components when available."
+    },
+    "cdss_1": {
+        "description": "CDSS item 1: Depression."
+    },
+    "cdss_2": {
+        "description": "CDSS item 2: Hopelessness."
+    },
+    "cdss_3": {
+        "description": "CDSS item 3: Self-depreciation."
+    },
+    "cdss_4": {
+        "description": "CDSS item 4: Guilty ideas of reference."
+    },
+    "cdss_5": {
+        "description": "CDSS item 5: Pathological guilt."
+    },
+    "cdss_6": {
+        "description": "CDSS item 6: Morning depression."
+    },
+    "cdss_7": {
+        "description": "CDSS item 7: Early wakening."
+    },
+    "cdss_8": {
+        "description": "CDSS item 8: Suicide."
+    },
+    "cdss_9": {
+        "description": "CDSS item 9: Observed depression."
+    },
+    "cdss_total": {
+        "description": "CDSS total score, calculated as the sum of items 1-9 when item-level data are available."
+    },
+    "hamilton_1": {
+        "description": "Hamilton Depression Rating Scale item 1: Depression."
+    },
+    "hamilton_2": {
+        "description": "Hamilton Depression Rating Scale item 2: Feelings of guilt."
+    },
+    "hamilton_3": {
+        "description": "Hamilton Depression Rating Scale item 3: Suicide."
+    },
+    "hamilton_4": {
+        "description": "Hamilton Depression Rating Scale item 4: Insomnia, early."
+    },
+    "hamilton_5": {
+        "description": "Hamilton Depression Rating Scale item 5: Insomnia, middle."
+    },
+    "hamilton_6": {
+        "description": "Hamilton Depression Rating Scale item 6: Insomnia, late."
+    },
+    "hamilton_7": {
+        "description": "Hamilton Depression Rating Scale item 7: Work activities."
+    },
+    "hamilton_8": {
+        "description": "Hamilton Depression Rating Scale item 8: Retardation."
+    },
+    "hamilton_9": {
+        "description": "Hamilton Depression Rating Scale item 9: Agitation."
+    },
+    "hamilton_10": {
+        "description": "Hamilton Depression Rating Scale item 10: Anxiety, psychic."
+    },
+    "hamilton_11": {
+        "description": "Hamilton Depression Rating Scale item 11: Anxiety, somatic."
+    },
+    "hamilton_12": {
+        "description": "Hamilton Depression Rating Scale item 12: Somatic symptoms, gastrointestinal."
+    },
+    "hamilton_13": {
+        "description": "Hamilton Depression Rating Scale item 13: Somatic symptoms, general."
+    },
+    "hamilton_14": {
+        "description": "Hamilton Depression Rating Scale item 14: Genital symptoms."
+    },
+    "hamilton_15": {
+        "description": "Hamilton Depression Rating Scale item 15: Hypochondriasis."
+    },
+    "hamilton_16a": {
+        "description": "Hamilton Depression Rating Scale item 16a: Loss of weight - history."
+    },
+    "hamilton_16b": {
+        "description": "Hamilton Depression Rating Scale item 16b: Loss of weight - actual change."
+    },
+    "hamilton_17": {
+        "description": "Hamilton Depression Rating Scale item 17: Insight."
+    },
+    "hamilton_18a": {
+        "description": "Hamilton Depression Rating Scale item 18a: Diurnal variation - if no."
+    },
+    "hamilton_18b": {
+        "description": "Hamilton Depression Rating Scale item 18b: Diurnal variation - when present."
+    },
+    "hamilton_19": {
+        "description": "Hamilton Depression Rating Scale item 19: Depersonalization and derealization."
+    },
+    "hamilton_20": {
+        "description": "Hamilton Depression Rating Scale item 20: Paranoid symptoms."
+    },
+    "hamilton_21": {
+        "description": "Hamilton Depression Rating Scale item 21: Obsessional and compulsive symptoms."
+    },
+    "hamilton_22": {
+        "description": "Hamilton Depression Rating Scale item 22: Fatigability."
+    },
+    "hamilton_23": {
+        "description": "Hamilton Depression Rating Scale item 23: Social withdrawal."
+    },
+    "hamilton_24": {
+        "description": "Hamilton Depression Rating Scale item 24: Appetite increase."
+    },
+    "hamilton_25": {
+        "description": "Hamilton Depression Rating Scale item 25: Increased eating."
+    },
+    "hamilton_26": {
+        "description": "Hamilton Depression Rating Scale item 26: Carbohydrate craving."
+    },
+    "hamilton_27": {
+        "description": "Hamilton Depression Rating Scale item 27: Weight gain."
+    },
+    "hamilton_28": {
+        "description": "Hamilton Depression Rating Scale item 28: Hypersomnia."
+    },
+    "hamd_28": {
+        "description": "HAMD total score for the 28-item version."
+    },
+    "hamd_21": {
+        "description": "HAMD total score for the 21-item version."
+    },
+    "hamd_17": {
+        "description": "HAMD total score for the 17-item version."
+    },
+    "hamd_6": {
+        "description": "HAMD-6 total score: items 1, 2, 7, 8, 10, and 13."
+    },
+    "madrs_1": {
+        "description": "MADRS item 1: Apparent sadness."
+    },
+    "madrs_2": {
+        "description": "MADRS item 2: Reported sadness."
+    },
+    "madrs_3": {
+        "description": "MADRS item 3: Inner tension."
+    },
+    "madrs_4": {
+        "description": "MADRS item 4: Reduced sleep."
+    },
+    "madrs_5": {
+        "description": "MADRS item 5: Reduced appetite."
+    },
+    "madrs_6": {
+        "description": "MADRS item 6: Concentration difficulties."
+    },
+    "madrs_7": {
+        "description": "MADRS item 7: Lassitude."
+    },
+    "madrs_8": {
+        "description": "MADRS item 8: Inability to feel."
+    },
+    "madrs_9": {
+        "description": "MADRS item 9: Pessimistic thoughts."
+    },
+    "madrs_10": {
+        "description": "MADRS item 10: Suicidal thoughts."
+    },
+    "madrs_total": {
+        "description": "MADRS total score, calculated as the sum of items 1-10 when item-level data are available."
+    },
+    "bdi_1": {
+        "description": "BDI item 1: Sadness."
+    },
+    "bdi_2": {
+        "description": "BDI item 2: Pessimism."
+    },
+    "bdi_3": {
+        "description": "BDI item 3: Past failure."
+    },
+    "bdi_4": {
+        "description": "BDI item 4: Loss of pleasure."
+    },
+    "bdi_5": {
+        "description": "BDI item 5: Guilty feelings."
+    },
+    "bdi_6": {
+        "description": "BDI item 6: Punishment feelings."
+    },
+    "bdi_7": {
+        "description": "BDI item 7: Self-dislike."
+    },
+    "bdi_8": {
+        "description": "BDI item 8: Self-criticalness."
+    },
+    "bdi_9": {
+        "description": "BDI item 9: Suicidal thoughts or wishes."
+    },
+    "bdi_10": {
+        "description": "BDI item 10: Crying."
+    },
+    "bdi_11": {
+        "description": "BDI item 11: Agitation."
+    },
+    "bdi_12": {
+        "description": "BDI item 12: Loss of interest."
+    },
+    "bdi_13": {
+        "description": "BDI item 13: Indecisiveness."
+    },
+    "bdi_14": {
+        "description": "BDI item 14: Worthlessness."
+    },
+    "bdi_15": {
+        "description": "BDI item 15: Loss of energy."
+    },
+    "bdi_16": {
+        "description": "BDI item 16: Changes in sleeping pattern."
+    },
+    "bdi_17": {
+        "description": "BDI item 17: Irritability."
+    },
+    "bdi_18": {
+        "description": "BDI item 18: Changes in appetite."
+    },
+    "bdi_19": {
+        "description": "BDI item 19: Concentration difficulty."
+    },
+    "bdi_20": {
+        "description": "BDI item 20: Tiredness or fatigue."
+    },
+    "bdi_21": {
+        "description": "BDI item 21: Loss of interest in sex."
+    },
+    "bdi_total": {
+        "description": "BDI total score, calculated as the sum of items 1-21 when item-level data are available."
+    },
+    "saps_1": {
+        "description": "SAPS item 1: Auditory hallucinations."
+    },
+    "saps_2": {
+        "description": "SAPS item 2: Voices commenting."
+    },
+    "saps_3": {
+        "description": "SAPS item 3: Voices conversing."
+    },
+    "saps_4": {
+        "description": "SAPS item 4: Somatic or tactile hallucinations."
+    },
+    "saps_5": {
+        "description": "SAPS item 5: Olfactory hallucinations."
+    },
+    "saps_6": {
+        "description": "SAPS item 6: Visual hallucinations."
+    },
+    "saps_7": {
+        "description": "SAPS item 7: Global rating of hallucinations."
+    },
+    "saps_8": {
+        "description": "SAPS item 8: Persecutory delusions."
+    },
+    "saps_9": {
+        "description": "SAPS item 9: Delusions of jealousy."
+    },
+    "saps_10": {
+        "description": "SAPS item 10: Delusions of guilt or sin."
+    },
+    "saps_11": {
+        "description": "SAPS item 11: Grandiose delusions."
+    },
+    "saps_12": {
+        "description": "SAPS item 12: Religious delusions."
+    },
+    "saps_13": {
+        "description": "SAPS item 13: Somatic delusions."
+    },
+    "saps_14": {
+        "description": "SAPS item 14: Delusions of reference."
+    },
+    "saps_15": {
+        "description": "SAPS item 15: Delusions of being controlled."
+    },
+    "saps_16": {
+        "description": "SAPS item 16: Delusions of mind reading."
+    },
+    "saps_17": {
+        "description": "SAPS item 17: Thought broadcasting."
+    },
+    "saps_18": {
+        "description": "SAPS item 18: Thought insertion."
+    },
+    "saps_19": {
+        "description": "SAPS item 19: Thought withdrawal."
+    },
+    "saps_20": {
+        "description": "SAPS item 20: Global rating of delusions."
+    },
+    "saps_21": {
+        "description": "SAPS item 21: Clothing and appearance."
+    },
+    "saps_22": {
+        "description": "SAPS item 22: Social and sexual behavior."
+    },
+    "saps_23": {
+        "description": "SAPS item 23: Aggressive and agitated behavior."
+    },
+    "saps_24": {
+        "description": "SAPS item 24: Repetitive or stereotyped behavior."
+    },
+    "saps_25": {
+        "description": "SAPS item 25: Global rating of bizarre behavior."
+    },
+    "saps_26": {
+        "description": "SAPS item 26: Derailment."
+    },
+    "saps_27": {
+        "description": "SAPS item 27: Tangentiality."
+    },
+    "saps_28": {
+        "description": "SAPS item 28: Incoherence."
+    },
+    "saps_29": {
+        "description": "SAPS item 29: Illogicality."
+    },
+    "saps_30": {
+        "description": "SAPS item 30: Circumstantiality."
+    },
+    "saps_31": {
+        "description": "SAPS item 31: Pressure of speech."
+    },
+    "saps_32": {
+        "description": "SAPS item 32: Distractable speech."
+    },
+    "saps_33": {
+        "description": "SAPS item 33: Clanging."
+    },
+    "saps_34": {
+        "description": "SAPS item 34: Global rating of positive formal thought disorder."
+    },
+    "saps_total": {
+        "description": "SAPS total score, described in the notebook as the sum of harmonised items 1-34."
+    },
+    "sans_1": {
+        "description": "SANS item 1: Unchanging facial expression."
+    },
+    "sans_2": {
+        "description": "SANS item 2: Decreased spontaneous movements."
+    },
+    "sans_3": {
+        "description": "SANS item 3: Paucity of expressive gestures."
+    },
+    "sans_4": {
+        "description": "SANS item 4: Poor eye contact."
+    },
+    "sans_5": {
+        "description": "SANS item 5: Affective nonresponsivity."
+    },
+    "sans_6": {
+        "description": "SANS item 6: Inappropriate affect."
+    },
+    "sans_7": {
+        "description": "SANS item 7: Lack of vocal inflections."
+    },
+    "sans_8": {
+        "description": "SANS item 8: Global rating of affective flattening."
+    },
+    "sans_9": {
+        "description": "SANS item 9: Poverty of speech."
+    },
+    "sans_10": {
+        "description": "SANS item 10: Poverty of content of speech."
+    },
+    "sans_11": {
+        "description": "SANS item 11: Blocking."
+    },
+    "sans_12": {
+        "description": "SANS item 12: Increased latency of response."
+    },
+    "sans_13": {
+        "description": "SANS item 13: Global rating of alogia."
+    },
+    "sans_14": {
+        "description": "SANS item 14: Grooming and hygiene."
+    },
+    "sans_15": {
+        "description": "SANS item 15: Impersistence at work or school."
+    },
+    "sans_16": {
+        "description": "SANS item 16: Physical anergia."
+    },
+    "sans_17": {
+        "description": "SANS item 17: Global rating of avolition-apathy."
+    },
+    "sans_18": {
+        "description": "SANS item 18: Recreational interests and activities."
+    },
+    "sans_19": {
+        "description": "SANS item 19: Sexual interest and activity."
+    },
+    "sans_20": {
+        "description": "SANS item 20: Ability to feel intimacy and closeness."
+    },
+    "sans_21": {
+        "description": "SANS item 21: Relationships with friends and peers."
+    },
+    "sans_22": {
+        "description": "SANS item 22: Global rating of anhedonia-asociality."
+    },
+    "sans_23": {
+        "description": "SANS item 23: Social inactiveness."
+    },
+    "sans_24": {
+        "description": "SANS item 24: Inattention during mental status testing."
+    },
+    "sans_25": {
+        "description": "SANS item 25: Global rating of attention."
+    },
+    "sans_total": {
+        "description": "SANS total score, described in the notebook as the sum of harmonised items 1-25."
+    },
+    "bprs_1": {
+        "description": "BPRS item 1: Somatic concern."
+    },
+    "bprs_2": {
+        "description": "BPRS item 2: Anxiety."
+    },
+    "bprs_3": {
+        "description": "BPRS item 3: Emotional withdrawal."
+    },
+    "bprs_4": {
+        "description": "BPRS item 4: Conceptual disorganization."
+    },
+    "bprs_5": {
+        "description": "BPRS item 5: Guilt feelings."
+    },
+    "bprs_6": {
+        "description": "BPRS item 6: Tension."
+    },
+    "bprs_7": {
+        "description": "BPRS item 7: Mannerisms and posturing."
+    },
+    "bprs_8": {
+        "description": "BPRS item 8: Grandiosity."
+    },
+    "bprs_9": {
+        "description": "BPRS item 9: Depressive mood."
+    },
+    "bprs_10": {
+        "description": "BPRS item 10: Hostility."
+    },
+    "bprs_11": {
+        "description": "BPRS item 11: Suspiciousness."
+    },
+    "bprs_12": {
+        "description": "BPRS item 12: Hallucinatory behavior."
+    },
+    "bprs_13": {
+        "description": "BPRS item 13: Motor retardation."
+    },
+    "bprs_14": {
+        "description": "BPRS item 14: Uncooperativeness."
+    },
+    "bprs_15": {
+        "description": "BPRS item 15: Unusual thought content."
+    },
+    "bprs_16": {
+        "description": "BPRS item 16: Blunted affect."
+    },
+    "bprs_17": {
+        "description": "BPRS item 17: Excitement."
+    },
+    "bprs_18": {
+        "description": "BPRS item 18: Disorientation."
+    },
+    "bprs_total": {
+        "description": "BPRS total score, described in the notebook as the sum of harmonised items 1-18."
+    }
+}
