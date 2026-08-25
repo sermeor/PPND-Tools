@@ -1,0 +1,1 @@
+srun --x11=all --export=HOME,TERM --mem=10G --pty /bin/tcsh -l
