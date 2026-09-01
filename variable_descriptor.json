@@ -73,6 +73,9 @@
             "22": "Agoraphobia"
         }
     },
+    "diagnostic_instrument": {
+        "description": "Diagnostic instrument or instruments used to diagnose the case group."
+    },
     "scanner": {
         "description": "MRI scanner/site ID; if not present, all participants were scanned on the same scanner."
     },
